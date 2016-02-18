@@ -1,0 +1,26 @@
+grafana:
+  lookup:
+    conf:
+      '[paths]'
+      '[server]'
+        http_addr = 127.0.0.1
+        root_url = %(protocol)s://%(domain)s:%(http_port)s/grafana
+      '[database]'
+      '[session]'
+      '[analytics]'
+      '[security]'
+        admin_password = hoonetorg
+      '[users]'
+      '[auth.anonymous]'
+      '[auth.github]'
+      '[auth.google]'
+      '[auth.proxy]'
+      '[auth.basic]'
+      '[auth.ldap]'
+      '[smtp]'
+      '[emails]'
+      '[log]'
+      '[log.console]'
+      '[log.file]'
+      '[event_publisher]'
+      '[dashboards.json]'

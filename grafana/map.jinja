@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{% import_yaml 'grafana/defaults.yaml' as default_settings %}
+
+{% set os_family_map = salt['grains.filter_by']({
+        'Debian': {
+            "sysconfdir" : '/etc/default',
+        },
+        'RedHat': {
+            "sysconfdir": '/etc/sysconfig',
+        },
+  }
+  , grain="os_family"
+  , merge=salt['pillar.get']('grafana:lookup'))
+%}
+{% do default_settings.grafana.update(os_family_map) %}
+
+{% set grafana = salt['pillar.get'](
+        'grafana',
+        default=default_settings.grafana,
+        merge=True
+    )
+%}
