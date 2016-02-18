@@ -3,28 +3,28 @@
 grafana:
   pkg: grafana
   service:
-    name: grafana
-  conffile: '/etc/grafana/grafana.conf'
+    name: grafana-server
+  conffile: '/etc/grafana/grafana.ini'
   
   # default settings
   conf:
-    '[paths]'
-    '[server]'
-    '[database]'
-    '[session]'
-    '[analytics]'
-    '[security]'
-    '[users]'
-    '[auth.anonymous]'
-    '[auth.github]'
-    '[auth.google]'
-    '[auth.proxy]'
-    '[auth.basic]'
-    '[auth.ldap]'
-    '[smtp]'
-    '[emails]'
-    '[log]'
-    '[log.console]'
-    '[log.file]'
-    '[event_publisher]'
-    '[dashboards.json]'
+    '[paths]':
+    '[server]':
+    '[database]':
+    '[session]':
+    '[analytics]':
+    '[security]':
+    '[users]':
+    '[auth.anonymous]':
+    '[auth.github]':
+    '[auth.google]':
+    '[auth.proxy]':
+    '[auth.basic]':
+    '[auth.ldap]':
+    '[smtp]':
+    '[emails]':
+    '[log]':
+    '[log.console]':
+    '[log.file]':
+    '[event_publisher]':
+    '[dashboards.json]':

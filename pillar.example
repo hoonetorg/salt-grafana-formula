@@ -3,13 +3,13 @@ grafana:
     conf:
       '[paths]'
       '[server]'
-        http_addr = 127.0.0.1
-        root_url = %(protocol)s://%(domain)s:%(http_port)s/grafana
+        http_addr: '127.0.0.1'
+        root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
       '[database]'
       '[session]'
       '[analytics]'
       '[security]'
-        admin_password = hoonetorg
+        admin_password: 'hoonetorg'
       '[users]'
       '[auth.anonymous]'
       '[auth.github]'
