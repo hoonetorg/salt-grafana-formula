@@ -6,7 +6,7 @@
 grafana_config__conffile:
   file.managed:
     - name: {{ grafana.conffile }}
-    - source: salt://grafana/files/grafana.ini.jinja
+    - source: salt://grafana/files/configtempl.jinja
     - template: jinja
     - context:
       grafana: {{grafana|json}}

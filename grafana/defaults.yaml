@@ -4,6 +4,8 @@ grafana:
   pkg: grafana
   service:
     name: grafana-server
+    state: enabled
+    enable: True
   conffile: '/etc/grafana/grafana.ini'
   
   # default settings
