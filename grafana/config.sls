@@ -9,7 +9,7 @@ grafana_config__conffile:
     - source: salt://grafana/files/configtempl.jinja
     - template: jinja
     - context:
-      grafana: {{grafana|json}}
+      confdict: {{grafana|json}}
     - mode: 644
     - user: root
     - group: root

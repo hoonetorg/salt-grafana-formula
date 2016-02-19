@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 grafana:
-  pkg: grafana
+  pkgs: 
+    - grafana
   service:
     name: grafana-server
-    state: enabled
+    state: running
     enable: True
   conffile: '/etc/grafana/grafana.ini'
   

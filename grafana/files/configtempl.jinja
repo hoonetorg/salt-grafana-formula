@@ -1,9 +1,9 @@
-{%- if grafana.conf.without_section_pre is defined and grafana.conf.without_section_pre -%}
-{%- for nosectoptpre, nosectoptpre_data in grafana.conf.without_section_pre.items()|default({})|sort -%}
+{%- if confdict.conf.without_section_pre is defined and confdict.conf.without_section_pre -%}
+{%- for nosectoptpre, nosectoptpre_data in confdict.conf.without_section_pre.items()|default({})|sort -%}
 {{nosectoptpre}}={{nosectoptpre_data}}
 {%- endfor -%}{{- '\n\n' -}}
 {%- endif -%}
-{%- for sect, sect_data in grafana.conf.items()|default({}) -%}
+{%- for sect, sect_data in confdict.conf.items()|default({}) -%}
 {%- if sect not in [ 'without_section_pre', 'without_section_post' ] -%}
 {{sect + '\n'}}
 {%- if sect_data != None -%}
@@ -13,8 +13,8 @@
 {%- endif -%}{{- '\n' -}}
 {%- endif -%}
 {%- endfor -%}
-{%- if grafana.conf.without_section_post is defined and grafana.conf.without_section_post -%}
-{%- for nosectoptpost, nosectoptpost_data in grafana.conf.without_section_post.items()|default({})|sort -%}
+{%- if confdict.conf.without_section_post is defined and confdict.conf.without_section_post -%}
+{%- for nosectoptpost, nosectoptpost_data in confdict.conf.without_section_post.items()|default({})|sort -%}
 {{nosectoptpost}}={{nosectoptpost_data}}
 {%- endfor -%}{{- '\n\n' -}}
 {%- endif -%}

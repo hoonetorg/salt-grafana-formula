@@ -5,4 +5,4 @@
 
 grafana_install__pkg:
   pkg.installed:
-    - name: {{ grafana.pkg }}
+    - pkgs: {{ grafana.pkgs }}
